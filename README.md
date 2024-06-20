@@ -1,74 +1,103 @@
-# A Wix Events and Wix eCommerce Next.js Music Tour Template
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiflon Norteño</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #ffd700;
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4caf50;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .about, .products, .contact {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
 
-![Template showcase](docs/media/template-showcase.gif)
+<header>
+    <h1>Chiflon Norteño</h1>
+</header>
 
-This template is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It uses [Wix Headless](https://dev.wix.com/api/sdk/about-wix-headless/overview) to leverage the Wix Events and Wix Stores business solutions for managing event ticketing and a store.
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre Nosotros</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
-## Local Development
+<section id="inicio" class="about">
+    <h2>Bienvenidos a Chiflon Norteño</h2>
+    <p>Somos una empresa dedicada a la fabricación y distribución de snacks peruanos como chifles, papas y más. También distribuimos frutos secos de la región andina.</p>
+</section>
 
-Prerequisites:
+<section id="sobre-mi" class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>Chiflon Norteño es una empresa comprometida con ofrecer productos de alta calidad, respetando las tradiciones y sabores auténticos del Perú. Nos enorgullecemos de llevar los mejores snacks a tu mesa, hechos con ingredientes seleccionados y bajo estrictos estándares de calidad.</p>
+</section>
 
-1. [Create a Wix Headless project](https://dev.wix.com/docs/go-headless/getting-started/setup/general-setup/create-a-project)
-2. [Add the Stores and Events apps to your project](https://dev.wix.com/docs/go-headless/getting-started/setup/general-setup/add-apps-to-a-project)
-3. Authorize the template with [quick start deployment](https://manage.wix.com/headless-funnel-nextjs/select-platform?templateName=commerce-ticketing) or by [creating an OAuth app](https://dev.wix.com/docs/go-headless/getting-started/setup/authorization/create-an-o-auth-app-for-visitors-and-members)
-4. [Set up your project's eCommerce settings](https://www.wix.com/my-account/site-selector/?buttonText=Select%20Site&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fstore/settings)
+<section id="productos" class="products">
+    <h2>Nuestros Productos</h2>
+    <ul>
+        <li>Chifles</li>
+        <li>Papas</li>
+        <li>Snacks peruanos</li>
+        <li>Frutos secos de la región andina</li>
+    </ul>
+</section>
 
-Set up environment variables to consume Wix Headless APIs:
+<section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p>Para más información, puedes seguirnos en nuestra página de Facebook:</p>
+    <p><a href="https://www.facebook.com/chiflonnorteno/?locale=es_LA" target="_blank">Facebook de Chiflon Norteño</a></p>
+</section>
 
-1. In the template's root folder, create a file for the local environment variables:
-   ```sh
-   cp .env.template .env.local.
-   ```
-2. In the new **.env.local** file, paste the OAuth app client ID after `NEXT_PUBLIC_WIX_CLIENT_ID=`.
+<footer class="footer">
+    <p>&copy; 2024 Chiflon Norteño. Todos los derechos reservados.</p>
+</footer>
 
-Run the development server:
-
-1. Run either:
-
-   ```sh
-   yarn dev
-   ```
-
-   or
-
-   ```sh
-   npm i
-   npm run dev
-   ```
-
-2. Open http://localhost:3000 in your browser to see the template home page.
-
-Edit the template:
-
-- Start editing the homepage by modifying **app/page.tsx**. The page auto-updates as you edit the file.
-- Edit any other page using the pattern **app/page.tsx**. For more information, see [Defining Routes](https://beta.nextjs.org/docs/routing/defining-routes) in the Next.js documentation.
-
-# Deployment
-
-You can deploy this repository using any platform which supports Next.js Version 13 and [App Router](https://nextjs.org/docs/app).
-
-The repository requires a single environment variable: `NEXT_PUBLIC_WIX_CLIENT_ID`, which should contain a client ID authorizing access to a Wix project's data.
-
-# Learn More
-
-To learn how to customize the template and add more functionality using Wix APIs, see the [Wix JavaScript SDK reference](https://dev.wix.com/api/sdk).
-
-This template is written in [Next.js](https://nextjs.org/docs) 13 using the [Next.js App Router](https://nextjs.org/docs/app).
-
-To learn more about Next.js, see:
-
-- [Next.js documentation](https://nextjs.org/docs): Learn about Next.js features and APIs.
-- [Learn Next.js](https://nextjs.org/learn): An interactive Next.js tutorial.
-
-Additionally, this template uses the following libraries and features:
-
-- [React Server Components](https://nextjs.org/docs/advanced-features/react-18/server-components)
-- [TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html)
-- [TanStack Query v4](https://tanstack.com/query/latest)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Flowbite](https://flowbite.com/)
-- [Wix client SDK](https://dev.wix.com/api/sdk/introduction)
-
-# Next.js and Wix Integration Guide
-
-See the comprehensive [integration guide](./docs/integration-guide.md) for step-by-step instructions on how to configure Wix as your headless Booking solution using Next.js on Vercel.
+</body>
+</html>
